@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title><%= page_title %></title>
+		<link rel="stylesheet" href="/stylesheets/compiled/screen.css" type="text/css" media="screen, projection" title="no title" charset="utf-8">
+    <%= yield :html_head %>
+  </head>
+  <body id="subindex">
+    <%= cms_toolbar %>
+		<div id="outer">    
+			<div id="container">
+				<div id="header">
+					<h1>GIRA: Groupe interdisciplinaire de recherche sur les Amériques</h1>
+					<%= render_menu :from_top=>1, :depth=>1  %>
+				</div>
+				
+				<div id="feature">
+					<div id="feature-teaser">
+						<h3><a href="more">En savoir plus</a></h3>
+					</div>
+					<div id="feature-text-column">
+						<div id="feature-text">
+							<%= container :feature %>
+							</div>
+						</div>
+				</div>
+
+				<div id="news">
+					<%= container :news %>
+				</div>
+
+				<div id="regards">
+					<h2>Regards Autochtones sur les Amériques</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet leo sapien, et pharetra eros. Curabitur bibendum dictum lorem et gravida. Nulla convallis vestibulum rhoncus. Duis tristique auctor porta. Aliquam sollicitudin tincidunt euismod. Praesent convallis, arcu vel adipiscing viverra, risus purus molestie turpis, sit amet euismod magna purus ut risus. </p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet leo sapien, et pharetra eros. Curabitur bibendum dictum lorem et gravida. Nulla convallis vestibulum rhoncus. Duis tristique auctor porta. Aliquam sollicitudin tincidunt euismod. Praesent convallis, arcu vel adipiscing viverra, risus purus molestie turpis, sit amet euismod magna purus ut risus.</p>
+
+					<p>[En savoir plus]</p>
+				</div>
+
+    </div>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+// This import applies a global reset to any page that imports this stylesheet.
+
+@import blueprint/reset.sass
+
+// To configure blueprint, edit the partials/base.sass file.
+
+@import partials/base.sass
+
+// Import all the default blueprint modules so that we can access their mixins.
+
+@import blueprint
+
+// Import the non-default scaffolding module.
+
+@import blueprint/modules/scaffolding.sass
+
+// Import compass utilities
+
+@import compass/utilities.sass
+
+//Recommended Blueprint configuration with scoping and semantic layout:
+
++blueprint-typography
++blueprint-debug
++blueprint-scaffolding
+
+!dark_background = #829096
+!lighter_grey = #DDE5E8
+!light_blue_text = #E6EDEF
+!light_blue_background = #EDF1F2
+!dark_blue_grey = #829096
+
+!serif = "Georgia, Palatino, 'Palatino Linotype', serif"
+!lucida = "Lucida Grande, Trebuchet, sans-serif"
+
+=rounded(!radius = 4px)  
+	:border-radius = !radius  
+	:-moz-border-radius = !radius  
+	:-webkit-border-radius = !radius
+
+=transparent-box(!paddingleft = 1.5em)
+	+box
+	:background-color = "inherit"
+	:padding-left = !paddingleft
+	:margin-bottom = .5em
+	
+#container
+	+container
+//	+showgrid
+
+body#index
+	background-color = !dark_background
+	#header
+		+column(12)
+		height: 407px
+		background: url('/images/americas-red.png') no-repeat right top
+		h1
+			+column(9)
+			+replace-text("gira-logo-large.png")
+			height: 242px
+			margin-top: 165px			
+	.title
+		+column(3)
+		margin-top: 80px
+	.title#last
+		+column(3,true)
+	h2
+		color = !light_blue_text
+		font-size: 1.5em	
+
+body#subindex
+	background-color = !light_blue_background
+	#outer
+		background: url('/images/header_grad_background.png') repeat-x
+	#header
+		+column(12)
+		height: 193px
+		h1
+			+replace-text("gira_header_title.png")
+			width: 940px
+			height: 89px
+			margin-top: 25px
+		#menu
+			ul
+				+horizontal-list
+				font-size: 1.2em
+				font-family = !lucida
+				border-top: 1px solid
+				border-bottom: 1px solid
+				border-color = !dark_blue_grey
+				margin-top: 22px
+				padding: 3px 0
+				li
+					padding-right: 40px
+				a
+					color = !light_blue_background
+					+hover-link
+				li.on
+					a
+						color = !light_blue_background - #666
+	#feature
+		+column(12)
+		background-color = !dark_blue_grey
+		+rounded(10px)
+		margin-top: 30px
+		#feature-teaser
+			+column(5)
+			height: 328px
+			background: url(/images/americas-red-drop-shadow.png) top right no-repeat
+			h3
+				margin-top: 200px
+				margin-left: 10px
+				font-family = !lucida
+				a
+					+hover-link
+					color = !lighter_grey
+					font-weight: bold
+		#feature-text-column
+			+column(7,true)
+			#feature-text
+				+transparent-box(0)
+				font-family = !serif
+				font-size: 1.3em
+				color = !light_blue_background
+	#main
+		+column(6)
+		margin-top: 30px
+	#news
+		+column(6)
+	#regards
+		+column(6, true)
+			
+		
+		
+
+// #sidebar
+// 	+column(3)
+// 	
+// #content
+// 	+column(9, true)
+// 	
+// #footer
+// 	+column(12)
+// 	text-align: center
+// 	#footer-links
+// 		+horizontal-list
+// 	
+// #header, #footer
+//		a
+// 		+hover-link
