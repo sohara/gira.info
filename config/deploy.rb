@@ -1,7 +1,7 @@
 set :application, "gira"
 
-set :deploy_to, "/var/vhosts/sohara.com/#{application}"
-set :user, "soharaweb" 
+set :deploy_to, "/var/vhosts/gira.info/#{application}"
+set :user, "alien8web" 
 set :ssh_options, { :forward_agent => true }
 
 set :scm, :git
