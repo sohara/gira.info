@@ -24,7 +24,7 @@ role :db,  "209.172.35.182", :primary => true
 
 desc "Create the symlink to the database.yml in /shared"
 task :db_sym_link, :roles => :app do
-    run "ln -s /var/vhosts/sohara.com/gira/shared/database.yml #{current_release}/config/database.yml"  
+    run "ln -s /var/vhosts/gira.info/gira/shared/database.yml #{current_release}/config/database.yml"  
 end
 
 task :link_shared_directories do
