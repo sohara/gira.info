@@ -9,3 +9,42 @@
 // Or you can set !blueprint_grid_width to a fixed value and unset !blueprint_container_size -- it will be calculated for you.
 !blueprint_grid_width   = (!blueprint_container_size + !blueprint_grid_margin) / !blueprint_grid_columns - !blueprint_grid_margin
 
+//Colour definitions 
+
+!dark_background = #829096
+!lighter_grey = #DDE5E8
+!light_blue_text = #E6EDEF
+!light_blue_background = #EDF1F2
+!dark_blue_grey = #829096
+!orange_header = #AA3729
+!light_blue_gray = #959DA0
+!dark_text = #38444A
+!orange_red = #E34937
+
+
+// Font definitions
+
+!serif = "Georgia, Palatino, 'Palatino Linotype', serif"
+!lucida = "Lucida Grande, Trebuchet, sans-serif"
+
+// Custom mixins
+
+=rounded(!radius = 4px)  
+	:border-radius = !radius  
+	:-moz-border-radius = !radius  
+	:-webkit-border-radius = !radius
+
+=transparent-box(!paddingleft = 1.5em)
+	+box
+	:background-color = "inherit"
+	:padding-left = !paddingleft
+	:margin-bottom = .5em
+	
+=centered-list(!padding = 5px)
+	:text-align center
+	:list-style none
+	li
+		:display inline	
+		:padding-right = !padding
+	li.last
+		:padding-right = 0

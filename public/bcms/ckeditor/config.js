@@ -1,7 +1,7 @@
 CKEDITOR.config.toolbar_CMS = [
   ['Source','-','Cut','Copy','Paste','PasteText','PasteFromWord','-','SpellChecker','Scayt','-','Undo','Redo','Find','Replace','RemoveFormat','-','NumberedList','BulletedList','Outdent','Indent','HorizontalRule'],
   '/',
-  ['Link','Unlink','Anchor','Image','Table','SpecialChar','-','Bold','Italic','Underline','JustifyLeft','JustifyCenter','JustifyRight','JustifyFull','-','TextColor','Styles']
+  ['Link','Unlink','Anchor','Image','Table','SpecialChar','-','Bold','Italic','Underline','Subscript','Superscript','JustifyLeft','JustifyCenter','JustifyRight','JustifyFull','-','TextColor','Styles','Format']
 ];
 
 CKEDITOR.config.toolbar_CMSForms = [
@@ -14,5 +14,5 @@ CKEDITOR.config.toolbar_CMSForms = [
 
 CKEDITOR.config.width = 598
 CKEDITOR.config.height = 400
-
+CKEDITOR.config.entities = false
 CKEDITOR.config.toolbar = 'CMS'

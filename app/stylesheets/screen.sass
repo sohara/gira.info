@@ -9,6 +9,7 @@
 // Import all the default blueprint modules so that we can access their mixins.
 
 @import blueprint
+@import blueprint/modules/fancy_type.sass
 
 // Import the non-default scaffolding module.
 
@@ -24,25 +25,6 @@
 +blueprint-debug
 +blueprint-scaffolding
 
-!dark_background = #829096
-!lighter_grey = #DDE5E8
-!light_blue_text = #E6EDEF
-!light_blue_background = #EDF1F2
-!dark_blue_grey = #829096
-
-!serif = "Georgia, Palatino, 'Palatino Linotype', serif"
-!lucida = "Lucida Grande, Trebuchet, sans-serif"
-
-=rounded(!radius = 4px)  
-	:border-radius = !radius  
-	:-moz-border-radius = !radius  
-	:-webkit-border-radius = !radius
-
-=transparent-box(!paddingleft = 1.5em)
-	+box
-	:background-color = "inherit"
-	:padding-left = !paddingleft
-	:margin-bottom = .5em
 	
 #container
 	+container
@@ -66,7 +48,13 @@ body#index
 		+column(3,true)
 	h2
 		color = !light_blue_text
-		font-size: 1.5em	
+		font-size: 1.5em
+		a
+			color = !light_blue_text
+			+hover-link
+	a
+		+hover-link
+		color: #333
 
 body#subindex
 	background-color = !light_blue_background
@@ -122,13 +110,100 @@ body#subindex
 				font-family = !serif
 				font-size: 1.3em
 				color = !light_blue_background
+	#news
+		h2
+			margin-top: 30px
+			margin-bottom: 0
+			padding-left: 15px
+			color = !orange_header
+			font-family = !lucida
+			font-weight: bold
+			a
+				+hover-link
+				color = !orange_header
+		#recent_news
+			+transparent-box(15px)
+			border-left: 1px solid 
+			border-color = !light_blue_gray
+			background: url(/images/gradient_rule.png) top right no-repeat
+			padding-top: 25px
+			.news-item-browser
+				border-bottom: 1px dashed
+				border-color = !light_blue_gray
+				margin-bottom: 30px
+				padding-bottom: 10px
+				color = !dark_text
+				h3
+					font-family = !serif
+					+caps
+					padding-left: 0
+					font-size: 2.5em
+					font-weight: normal
+					margin-bottom: 0
+					a
+						color = !dark_text
+						+hover-link
+				.news_date
+					color = !dark_blue_grey
+				p
+					margin: 1em 0 0 0
+					font-size: 1.2em
+			a
+				+hover-link
+				color = !orange_red
+					
 	#main
 		+column(6)
+		margin-top: 30px
+		font-size: 1.2em
+		h2
+			font-family = !serif
+			border-bottom: 1px solid
+	#section_nav
+		+column(5, true)
+		+prepend(1)
 		margin-top: 30px
 	#news
 		+column(6)
 	#regards
 		+column(6, true)
+		background: url(/images/gradient_box.png) top right no-repeat
+		margin-top: 20px
+		#regards-text
+			+transparent-box
+			h2
+				margin-top: 0px
+				padding-bottom: 10px
+				margin-bottom: 10px
+				color = !orange_header
+				font-family = !lucida
+				font-weight: medium
+				border-bottom: 1px dashed
+				border-color = !light_blue_gray
+				a
+					+hover-link
+					color = !orange_header
+			p
+				font-size: 1.2em
+			a
+				+hover-link
+				color = !orange_red
+	
+	#footer
+		+column(12)
+		margin-top: 30px
+		padding-top: 5px
+		border-top: 1px solid
+		border-color = !light_blue_gray
+		#menu
+			ul
+				+centered-list(10px)
+				a
+					+hover-link
+					color = !dark_blue_grey - #111
+				li.on
+					a
+						color = !dark_blue_grey + #111
 			
 		
 		
