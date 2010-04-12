@@ -15,8 +15,10 @@
 					<%= render_menu :from_top=>1, :depth=>1  %>
 				</div>
 			<div id="main">
-				<h2><%= current_page.section.name %>: <%= page_title %></h2>
-				<%= container :main %>
+				<div id="main_text">
+					<h2><%= current_page.section.name %>: <%= page_title %></h2>
+					<%= container :main %>
+				</div>
 			</div>
 			<div id="section_nav">
 				<h3><%= current_page.section.name %></h3>
