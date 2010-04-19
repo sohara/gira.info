@@ -1,0 +1,76 @@
+#flash messages
+en:
+  controllers:
+    cache:
+      flushed: Page Cache Flushed
+    connectors:
+      removed: "Removed '{{connectable_name}}' from the '{{container}}' container"
+      failed_to_remove: "Failed to remove '{{connectable_name}}' from the '{{container}}' container"    
+      up_in: up in
+      down_in: down in
+      to_top: to the top of
+      to_bottom: to the bottom of
+      moved: "Moved '{{connectable_name}}' {{where}} the '{{container}}' container"
+      failed_to_move: "Failed to move '{{connectable_name}}' {{where}} the '{{container}}' container"
+    content_block:
+      commands:
+        deleted: deleted
+        published: published
+        reverted: reverted to version {{version}}
+        command_success: "{{content_type_name}} '{{block_name}}' was {{result}}"
+        command_failure: "{{content_type_name}} '{{block_name}}' could not be {{result}}"
+      created: "{{content_type}} '{{block_name}}' was created"
+      updated: "{{content_type}} '{{block_name}}' was updated"
+    dynamic_view:
+      created: "{{dynamic_view_type}} '{{name}}' was created"
+      updated: "{{dynamic_view_type}} '{{name}}' was updated"
+      deleted: "{{dynamic_view_type}} '{{name}}' was deleted"
+    links:
+      created: "Link '{{name}}' was created"
+      updated: "Link '{{name}}' was updated"
+      deleted: "Link '{{name}}' was deleted"
+      failed_delete: "Link '{{name}}' could not be deleted"
+    page_route_options:
+      created: "{{object}} added"
+      updated: "{{object}} updated"
+      deleted: "{{object}} deleted"
+    page_routes:
+      created: Page Route Created
+      updated: Page Route Updated
+      deleted: Page Route Deleted
+    pages:
+      created: "Page '{{page_name}}' was created"
+      updated: "Page '{{page_name}}' was updated"
+      deleted: "Page '{{page_name}}' was deleted"
+      failed_delete: "Page '{{page_name}}' could not be deleted"
+      published: published
+      hidden: hidden
+      archived: archived
+      multiple_pages_action: "{{how_many}} pages {{verb}}"
+      single_page_action: "Page '{{page_name}}' was {{verb}}"
+      reverted: "Page '{{page_name}}' was reverted to version {{version}}"
+    resource:
+      created: "{{resource_name}} '{{object_name}}' was created"
+      updated: "{{resource_name}} '{{object_name}}' was updated"
+      deleted: "{{resource_name}} '{{object_name}}' was deleted"
+    sections:
+      created: "Section '{{section_name}}' was created"
+      updated: "Section '{{section_name}}' was updated"
+      deleted: "Section '{{section_name}}' was deleted"
+      failed_delete: "Section '{{section_name}}' could not be deleted"
+    sessions:
+      created: Logged in successfully
+      failed_create: Log in failed
+      deleted: You have been logged out.
+      failed_create_note: "Couldn't log you in as {{login}}"
+    tasks:
+      created: "Page was assigned to {{user}}"
+      completed_multiple: Tasks marked as complete
+      copmleted_single: Task was marked as complete
+      cannot_complete: You cannot complete tasks that are not assigned to you
+    users:
+      password_changed: "Password for '{{user}}' was changed"
+      disabled: "User '{{user}}' was disabled"
+      created: "User '{{user}}' was created"
+      updated: "User '{{user}}' was updated"
+      

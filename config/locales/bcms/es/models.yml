@@ -1,0 +1,146 @@
+es:
+  models:
+    attachment:
+      must_upload_file: Debes agregar un archivo
+    category:
+      name_label: Nombre
+      type_label: Tipo
+      updated_label: Actualizado en
+      display_name: Subcategoría
+      display_name_plural: Subcategorías
+    category_type:
+      display_name: Categoría
+      display_name_plural: Categorías
+      cannot_be_deleted: 
+        one: "Este tipo no puede ser eliminado porque está en uso en 1 categoría"
+        other: "Este tipo no puede ser eliminado porque está en uso en {{count}} categorías"
+    content_type:
+      name_label: Nombre
+      updated_label: Actualizado en
+    dynamic_view:
+      unique_combination: "Debe tener una combinación única de nombre, formato y handler"
+    forgot_password_mailer:
+      account_management: Administración de cuentas
+    file_block:
+      display_name: Archivo
+    html_block:
+      display_name: Texto
+      display_name_plural: Textos
+    image_block:
+      display_name: Imagen
+    page:
+      create_version_comment: "{{connectable}} se ha agregado al contenedor '{{container}}'"
+      # TODO some translations pending  here
+      remove_version_comment: "{{connectable}} ha sido eliminado del contenedor '{{container}}'"
+      path_reserved: "no es válida, la ruta {{path}} es una ruta reservada"
+    page_partial:
+      name_format_error_message: "sólo puede contener letras minúsculas, números y guiones bajos y debe comenzar con un guión bajo '_')"
+    page_template:
+      name_format_error_message: "sólo puede contener letras minúsculas, números y guiones bajos y debe comenzar una letra minúscula)"
+    portlet:
+      name_label: Nombre
+      type_label: Tipo
+      updated_label: Actualizado en
+    section:
+      name_format_error_message: "no puede contener '/'"
+      path_reserved: "es inválida, '{{path}}' es una ruta reservada"
+    tag:
+      name_label: Nombre
+      usages_label: Usos
+      updated_label: Actualizado en
+    task:
+      subject: "La página {{page}} te ha sido asignada"
+      cannot_assign: No puede asignar tareas
+      cannot_be_assigned: No se le pueden asignar tareas
+    template:
+      main_menu: Menú principal 
+    user:
+      login_format_error_message: "utiliza sólo letras, números y .-_@ por favor."
+      email_format_error_message: "debe ser una dirección de correo, ej. xx@xx.com"
+    
+  activerecord:
+    errors:
+      template:
+        header: "1 error no permitió guardar este(a) {{model}}"
+        other:  "{{count}} errores no permitieron guardar este(a) {{model}}"
+        body: "Hay problemas con los siguientes campos:"
+      messages:
+        blank: " no puede estar en blanco"
+    models:
+      category: Categoría
+      category_type: Tipo de Categoría
+      dynamic_view: Vista Dinámica
+      file_block: Bloque de Archivo
+      html_block: Bloque de Texto
+      image_lock: Bloque de Imagen
+      page_partial: Página Parcial
+      page_route: Ruta de Página
+    attributes:
+      category:
+        name: Nombre
+        type: Tipo
+      category_type:
+        name: Nombre
+      dynamic_view:
+        name: Nombre
+        format: Formato
+        body: Contenido
+      file_block:
+        name: Nombre
+        tags: Etiquetas
+        attachment_file: Archivo
+        attachment_file_section: Sección
+        attachment_file_path: Ruta
+      group:
+        name: Nombre
+      html_block:
+        name: Nombre
+        content: Contenido
+        tags: Etiquetas
+      image_block:
+        name: Nombre
+        tags: Etiquetas
+        attachment_file: Archivo
+        attachment_section: Sección
+        attachment_file_path: Path
+      link:
+        name: Nombre
+        url: URL
+      page:
+        name: Nombre
+        title: Título
+        path: Ruta
+        template_file_name: Template
+        cacheable: ¿Habilitar cache?
+        hidden: ¿Ocultar de menus?
+        archived: ¿Archivada?
+        description: Descripción
+        keywords: Palabras clave
+        language: Idioma
+      page_route:
+        page: Página
+        name: Nombre
+        pattern: Patrón
+        code: Código
+      redirect:
+        from_path: De
+        to_path: A
+      section:
+        name: Nombre
+        path: Ruta
+        hidden: ¿Ocultar de menus?
+      tag:
+        name: Nombre
+      task:
+        assigned_to: Asignar a
+        due_date: Fecha Límite
+        comment: Comentario
+      user:
+        login: Nombre de usuario
+        email: Email
+        first_name: Nombre
+        last_name: Apellidos
+        expires_at: Expiración
+        password: Password
+        confirm_password: Confirma Password
+        

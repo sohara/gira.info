@@ -1,0 +1,77 @@
+#flash messages
+es:
+  controllers:
+    cache:
+      flushed: El cache de Páginas ha sido eliminado
+    connectors:
+      removed: "Se ha eliminado '{{connectable_name}}' del contenedor '{{container}}'"
+      failed_to_remove: "No fue posible eliminar '{{connectable_name}}' del contenedor '{{container}}'"
+      up_in: hacia arriba
+      down_in: hacia abajo
+      to_top: hasta arriba
+      to_bottom: hasta abajo
+      moved: "Se ha movido '{{connectable_name}}' {{where}} en el contenedor '{{container}}'"
+      failed_to_move: "No fue posible mover '{{connectable_name}}' {{where}} en el contenedor '{{container}}'"
+    content_block:
+      commands:
+        deleted: eliminado
+        published: publicado
+        reverted: revertido a la versión {{version}}
+        command_success: "El (la) {{content_type_name}} '{{block_name}}' fue {{result}}"
+        command_failure: "El (la) {{content_type_name}} '{{block_name}}' no pudo ser {{result}}"
+      created: "{{content_type}} '{{block_name}}' ha sido creado"
+      updated: "{{content_type}} '{{block_name}}' ha sido actualizado"
+    dynamic_view:
+      created: "{{dynamic_view_type}} '{{name}}' ha sido creado(a)"
+      updated: "{{dynamic_view_type}} '{{name}}' ha sido actualizado(a)"
+      deleted: "{{dynamic_view_type}} '{{name}}' ha sido eliminado(a)"
+    links:
+      created: "El link '{{name}}' ha sido creado"
+      updated: "El link '{{name}}' ha sido actualizado"
+      deleted: "El link '{{name}}' ha sido eliminado"
+      failed_delete: "El link '{{name}}' no pudo ser eliminado"
+    page_route_options:
+      created: "{{object}} agregado"
+      updated: "{{object}} actualizado"
+      deleted: "{{object}} eliminado"
+    page_routes:
+      created: La ruta de página ha sido creada
+      updated: La ruta de página ha sido actualizada
+      deleted: La ruta de página ha sido eliminada
+    pages:
+      created: "La página '{{page_name}}' ha sido creada"
+      updated: "La página '{{page_name}}' ha sido actualizada"
+      deleted: "La página '{{page_name}}' ha sido eliminada"
+      failed_delete: "La página '{{page_name}}' no pudo ser eliminada"
+      published: publicada
+      hidden: ocultada
+      archived: archivada
+      multiple_pages_action: "{{how_many}} páginas {{verb}}s"
+      single_page_action: "La página '{{page_name}}' ha sido {{verb}}"
+      reverted: "La página '{{page_name}}' ha sido revertida a la versión {{version}}"
+    resource:
+      created: "{{resource_name}} '{{object_name}}' ha sido creado"
+      updated: "{{resource_name}} '{{object_name}}' ha sido actualizado"
+      deleted: "{{resource_name}} '{{object_name}}' ha sido eliminado"
+    sections:
+      created: "La sección '{{section_name}}' ha sido creada"      
+      updated: "La sección '{{section_name}}' ha sido actualizada"      
+      deleted: "La sección '{{section_name}}' ha sido eliminada"      
+      failed_delete: "La sección '{{section_name}}' no pudo ser eliminada"
+    sessions:
+      created: Inicio de sesión exitoso
+      failed_create: Ha fallado el intento de iniciar sesión
+      deleted: Tu sesión ha terminado
+      failed_create_note: "No fue posible iniciar sesión para el usuario {{login}}"      
+    tasks:
+      created: "La página ha sido asignada a {{user}}"
+      completed_multiple: Tareas marcadas como completadas
+      copmleted_single: La tarea fue marcada como completada
+      cannot_complete: No puedes completar tareas que no te han sido asignadas
+    users:
+      password_changed: "El password para '{{user}}' ha sido cambiado"
+      disabled: "El usuario '{{user}}' ha sido deshabilitado"
+      created: "El usuario '{{user}}' ha sido creado"
+      updated: "El usuario '{{user}}' ha sido actualizado"
+      
+        

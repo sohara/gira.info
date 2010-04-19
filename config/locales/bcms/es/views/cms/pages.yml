@@ -1,0 +1,39 @@
+es:
+  pages:
+    edit_connector:
+      show: Ver este contenido ({{connectable_name}})
+      edit: Editar este contenido ({{connectable_name}})
+      up: Mover este contenido hacia arriba ({{connectable_name}})
+      down: Mover este contenido hacia abajo ({{connectable_name}})
+      delete: Eliminar este contenido de la página ({{connectable_name}}) Permanecerá disponible en la Librería de Contenidos
+      live: Este contenido está publicado y puede ser visto por los visitantes del sitio.
+      draft: Este contenido es un borrador y no será visto por los visitantes del sitio hasta que sea publicado.
+    edit_container:
+      add: Agregar contenido nuevo a este contenedor ({{container_name}})
+      insert: Insertar contenido existente a este contenedor ({{container_name}})
+      live: Este contenido está publicado y puede ser visto por los visitantes del sitio.
+      draft: Este contenido es un borrador y no será visto por los visitantes del sitio hasta que sea publicado.
+    form: 
+      title_hint: (Dejar en blanco si es el mismo que el nombre)
+    edit:
+      page_title: "Editar Propiedades / Página '{{page_name}}'"
+      list_all: Mostrar todas
+      edit_content: Editar Contenido
+      save: Guardar
+    new:
+      page_title: Página Nueva
+      list_all: Mostrar Todas
+      save: Guardar
+    versions:
+      page_title: "Lista de Versions / Página '{{page_name}}'"
+      view: ver
+      edit_content: editar contenido
+      edit_properties: editar propiedades
+      revert: Revertir
+      version: Versión
+      comment: Comentario
+      date: Fecha
+      editor: Editor
+      live: (EN VIVO)
+      current: (ACTUAL)
+      

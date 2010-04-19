@@ -1,0 +1,7 @@
+es:
+  sessions:
+    new:
+      page_title: Ingreso CMS
+      username: Usuario
+      login: INGRESAR
+      remember_me: Recuérdame

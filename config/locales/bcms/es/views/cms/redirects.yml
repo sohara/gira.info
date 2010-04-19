@@ -1,0 +1,19 @@
+es:
+  redirects:
+    form:
+      save: Guardar
+    edit:
+      page_title: Editar Redireccionamiento
+      list_all: Mostrar todos
+    index: 
+      page_title: Lista de Redireccionamientos
+      add: Agregar
+      edit: Editar
+      delete: Eliminar
+      confirm: ¿Estás seguro(a) de que quieres eliminar este redireccionamiento?
+      from: De
+      to: A
+    new:
+      page_title: Nuevo Redireccionamiento
+      list_all: Mostrar todos
+      

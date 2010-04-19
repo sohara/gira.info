@@ -1,0 +1,36 @@
+es:
+  groups:
+    form:
+      list_all: Mostrar Todos
+      group_name: Nombre del grupo
+      type_of_user: Tipo de usuario
+      instructions: ¿A qué tipo de usuario representa este grupo?
+      save: Guardar
+    permissions:
+      global_permissions: Permisos globales
+    sections:
+      section_permissions: Permisos por sección
+      instructions: ¿Qué secciones los miembros de este grupo deben estar permitidos a
+      view: ver
+      edit: editar
+      path: Ruta
+    edit:
+      page_title: Administración / Editar grupo
+      toolbar_title: Editar Grupo
+    index:
+      page_title: Administración / Lista de grupos
+      toolbar_title: Lista de grupos
+      add_group: Agregar grupo
+      name: Nombre
+      type: Tipo
+      permissions: Permisos
+      edit: Editar
+      view: Ver
+      of: de
+      sections: Secciones
+      all_sections: Todas las secciones
+    new:
+      page_title: Administración / Agregar Grupo
+      toolbar_title: Agregar nuevo grupo
+      
+         
