@@ -33,12 +33,15 @@
 a
 	+hover-link
 	color = !orange_red
+	
+a:visited
+	color = !orange_red
 		
 body#index
 	background-color = !dark_background
 	#header
 		+column(12)
-		height: 407px
+		height: 428px
 		background: url('/images/americas-red.png') no-repeat right top
 		h1
 			+column(9)
@@ -90,6 +93,24 @@ body#subindex
 				li.on
 					a
 						color = !light_blue_background - #666
+
+	#container
+		ul.breadcrumbs
+			color = !dark_background
+			+horizontal-list
+			font-size: 1.2em
+			li:after
+				content: " > "
+			li:last-child:after
+				content: ""
+		h2#section_header
+			font-size: 3em
+			color: #ccc
+			border-bottom: 1px solid #333
+			font-family = !serif
+			border-color: #ccc
+			margin-bottom: 0
+
 	#feature
 		+column(12)
 		background-color = !dark_blue_grey
@@ -114,6 +135,7 @@ body#subindex
 				font-family = !serif
 				font-size: 1.3em
 				color = !light_blue_background
+
 	#news
 		h2
 			margin-top: 30px
@@ -163,14 +185,24 @@ body#subindex
 		background-color = !mid_grey
 		+rounded(10px)
 		#main_text
-			+transparent-box
-			+rounded(10px)
+			margin: 10px 15px
 			h2
 				font-family = !serif
 				border-bottom: 1px solid
+			h3.name
+				margin-bottom: 5px
+			#membre_photo_small
+				background-color: #ccc
+				border: 1px solid #333
+				+float(right)
+				margin-right: 63px
+			#membre_photo
+				background-color: #ccc
+				border: 1px solid #333
+				+float(right)
+				margin: 0 63px 20px 20px				
 	#section_nav
 		+column(3, true)
-		+prepend(1)
 		margin-top: 30px
 		a
 			+hover-link

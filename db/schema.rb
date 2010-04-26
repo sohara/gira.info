@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091109175123) do
+ActiveRecord::Schema.define(:version => 20100426121845) do
 
   create_table "attachment_versions", :force => true do |t|
     t.integer  "attachment_id"
@@ -258,6 +258,69 @@ ActiveRecord::Schema.define(:version => 20091109175123) do
     t.boolean  "archived",      :default => false
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
+  end
+
+  create_table "membre_versions", :force => true do |t|
+    t.integer  "membre_id"
+    t.integer  "version"
+    t.string   "nom_de_tri"
+    t.string   "institution"
+    t.integer  "attachment_id"
+    t.integer  "attachment_version"
+    t.text     "texte_fr"
+    t.text     "texte_en"
+    t.text     "texte_pt"
+    t.text     "texte_sp"
+    t.string   "name"
+    t.boolean  "published",          :default => false
+    t.boolean  "deleted",            :default => false
+    t.boolean  "archived",           :default => false
+    t.string   "version_comment"
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "coordination"
+    t.string   "slug"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.text     "poste_fr"
+    t.text     "poste_en"
+    t.text     "poste_sp"
+    t.text     "poste_pt"
+  end
+
+  create_table "membres", :force => true do |t|
+    t.integer  "version"
+    t.integer  "lock_version",       :default => 0
+    t.string   "nom_de_tri"
+    t.string   "institution"
+    t.integer  "attachment_id"
+    t.integer  "attachment_version"
+    t.text     "texte_fr"
+    t.text     "texte_en"
+    t.text     "texte_pt"
+    t.text     "texte_sp"
+    t.string   "name"
+    t.boolean  "published",          :default => false
+    t.boolean  "deleted",            :default => false
+    t.boolean  "archived",           :default => false
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "coordination"
+    t.string   "slug"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.text     "poste_fr"
+    t.text     "poste_en"
+    t.text     "poste_sp"
+    t.text     "poste_pt"
   end
 
   create_table "news_article_versions", :force => true do |t|

@@ -1,0 +1,27 @@
+<%= f.cms_text_field :name %>
+<%= f.cms_text_field :nom_de_tri %>
+<%= f.cms_text_field :institution %>
+<style type="text/css">
+	.clearfix:after {
+	    content: ".";
+	    display: block;
+	    height: 0;
+	    clear: both;
+	    visibility: hidden;
+	}
+	.file_fields {
+		height: 100px;
+	}
+</style>
+<% if @block.photo? %><div class="clearfix" style="float:right;margin: 10px 145px 10px 0;display:block;"><%= image_tag @block.photo.url(:col_1), :style => "" %></div><% end %> 
+<%= f.cms_file_field :photo, :label => "Photo" %>
+<%= f.cms_check_box :coordination  %>
+<%= f.cms_text_area :poste_fr, :rows => 2, :style => "height:45px" %>
+<%= f.cms_text_editor :texte_fr %>
+<%= f.cms_text_area :poste_en, :rows => 2, :style => "height:45px" %>
+<%= f.cms_text_editor :texte_en %>
+<%= f.cms_text_area :poste_pt, :rows => 2, :style => "height:45px" %>
+<%= f.cms_text_editor :texte_pt %>
+<%= f.cms_text_area :poste_sp, :rows => 2, :style => "height:45px" %>
+<%= f.cms_text_editor :texte_sp %>
+

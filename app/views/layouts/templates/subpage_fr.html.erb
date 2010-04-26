@@ -14,19 +14,23 @@
 					<h1>GIRA: Groupe interdisciplinaire de recherche sur les Amériques</h1>
 					<%= render_menu :from_top=>1, :depth=>1  %>
 				</div>
-			<div id="main">
-				<div id="main_text">
-					<h2><%= current_page.section.name %>: <%= page_title %></h2>
-					<%= container :main %>
+				<div>
+				&nbsp;	<%= render_breadcrumbs :from_top=>1 %>&nbsp;
 				</div>
-			</div>
-			<div id="section_nav">
-				<h3><%= current_page.section.name %></h3>
-				<%= render_menu :from_top=>2, :depth=>1  %>
-			</div>
-			<div id="footer">
-				<%= render_menu :from_top=>1, :depth=>1  %>
-			</div>	
+				<h2 id="section_header"><%= current_page.section.name %></h2>	
+				<div id="main">
+					<div id="main_text">
+						<h2><%= @my_page_title || page_title %></h2>
+						<%= container :main %>
+					</div>
+				</div>
+				<div id="section_nav">
+					<h3><%= current_page.section.name %></h3>
+					<%= render_menu :from_top=>2, :depth=>1  %>
+				</div>
+				<div id="footer">
+					<%= render_menu :from_top=>1, :depth=>1  %>
+				</div>	
 			</div>
     </div>
 	</div>

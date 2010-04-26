@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.namespace('cms') {|cms| cms.content_blocks :membres }
+
   map.routes_for_bcms_news
   map.fr_news_article "fr/actualites/article/:year/:month/:day/:slug", :controller => "cms/content", :_page_route_id => "2", :action => "show_page_route"
 
