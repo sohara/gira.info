@@ -28,7 +28,7 @@ task :db_sym_link, :roles => :app do
 end
 
 task :link_shared_directories do
-  run "ln -s #{shared_path}/uploads #{release_path}/uploads"
+  run "ln -s #{shared_path}/uploads #{release_path}/public/uploads"
 end
 
 namespace :deploy do
