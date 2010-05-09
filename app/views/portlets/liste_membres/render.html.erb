@@ -1,7 +1,11 @@
-<h2>Nos membres</h3>
+<h2>Le réseau GIRA</h2>
 
 <% for membre in @membres %>
-<% if membre.photo? %><div id="membre_photo_small"><%= image_tag membre.photo.url(:col_1) %></div><% end %>
+<% if membre.photo? %>
+	<div id="membre_photo_small"><%= image_tag membre.photo.url(:col_1) %></div>
+<% else %>
+	<div id="membre_photo_small"><%= image_tag "/images/gira_membre_blank.png" %></div>
+	<% end %>
 <h3 class="name"><%= link_to membre.name, show_membres_fr_path(membre.route_params) %></h3>
 <p><strong><%= membre.institution %></strong></p>
 <p><%= simple_format membre.poste_fr %></p>

@@ -1,7 +1,9 @@
 class Membre < ActiveRecord::Base
   acts_as_content_block
   
-  before_validation :set_slug
+  before_validation :set_slug, :delete_if_chosen
+  attr_accessor :delete_photo
+  
   has_attached_file :photo, 
     :styles => { :col_1 => "60x120>", :col_2 => "140x280>", :col_3  => "220x440"}, 
     :url => "/uploads/:class/:attachment/:basename_:id_:style.:extension", 
@@ -17,4 +19,10 @@ class Membre < ActiveRecord::Base
     {:slug => slug}
   end
 
+  def delete_if_chosen
+    if self.delete_photo == "1"
+      logger.info "!!! In conditional block"
+    end
+  end
+  
 end

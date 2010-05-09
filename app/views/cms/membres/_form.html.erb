@@ -15,6 +15,7 @@
 </style>
 <% if @block.photo? %><div class="clearfix" style="float:right;margin: 10px 145px 10px 0;display:block;"><%= image_tag @block.photo.url(:col_1), :style => "" %></div><% end %> 
 <%= f.cms_file_field :photo, :label => "Photo" %>
+<% if @block.photo? %><%= f.cms_check_box :delete_photo,  :label => "Supprimer le photo" %><% end %>
 <%= f.cms_check_box :coordination  %>
 <%= f.cms_text_area :poste_fr, :rows => 2, :style => "height:45px" %>
 <%= f.cms_text_editor :texte_fr %>

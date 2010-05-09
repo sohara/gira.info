@@ -6,4 +6,4 @@
 <p><b>Texte En:</b> <%= @content_block.texte_en %></p>
 <p><b>Texte Pt:</b> <%= @content_block.texte_pt %></p>
 <p><b>Texte Sp:</b> <%= @content_block.texte_sp %></p>
-<p><b>Photo:</b> <%= image_tag @content_block.photo.url(:col_3)%></p>
+<% if @content_block.photo? %><p><b>Photo:</b> <br /><%= image_tag @content_block.photo.url(:col_3)%></p><% end %>
