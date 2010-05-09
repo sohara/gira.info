@@ -20,8 +20,10 @@ class Membre < ActiveRecord::Base
   end
 
   def delete_if_chosen
+    logger.info "!!! Delete_photo is #{self.delete_photo}"
     if self.delete_photo == "1"
       logger.info "!!! In conditional block"
+      update_attribute(:photo, nil) 
     end
   end
   
