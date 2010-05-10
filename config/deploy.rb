@@ -27,8 +27,11 @@ task :db_sym_link, :roles => :app do
     run "ln -s /var/vhosts/gira.info/gira/shared/database.yml #{current_release}/config/database.yml"  
 end
 
+# links both /uploads (bcms default) and /public/uploads (for paperlcip) 
+# to /shared dir
 task :link_shared_directories do
   run "ln -s #{shared_path}/uploads #{release_path}/public/uploads"
+  run "ln -s #{shared_path}/uploads #{release_path}/uploads"
 end
 
 namespace :deploy do
