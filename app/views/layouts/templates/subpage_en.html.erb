@@ -14,30 +14,24 @@
 					<h1 class="en">GIRA: Interdisciplinary Research Group on the Americas</h1>
 					<%= render_menu :from_top=>1, :depth=>1  %>
 				</div>
-				
-				<div id="feature">
-					<div id="feature-teaser">
-						<h3><a href="/fr/about-us">Learn more</a></h3>
-					</div>
-					<div id="feature-text-column">
-						<div id="feature-text">
-							<%= container :feature %>
-							</div>
-						</div>
+				<div>
+				&nbsp;	<%= render_breadcrumbs :from_top=>1 %>&nbsp;
 				</div>
-
-				<div id="news">
-					<%= container :news %>
-				</div>
-
-				<div id="regards">
-					<div id="regards-text">
-						<%= container :regards %>
+				<h2 id="section_header"><%= current_page.section.name %></h2>	
+				<div id="main">
+					<div id="main_text">
+						<h2><%= @my_page_title || page_title %></h2>
+						<%= container :main %>
 					</div>
+				</div>
+				<div id="section_nav">
+					<h3><%= current_page.section.name %></h3>
+					<%= render_menu :from_top=>2, :depth=>3  %>
 				</div>
 				<div id="footer">
 					<%= render_menu :from_top=>1, :depth=>1  %>
-				</div>
+				</div>	
+			</div>
     </div>
 	</div>
   </body>

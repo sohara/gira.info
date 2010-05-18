@@ -5,9 +5,7 @@ class Membre < ActiveRecord::Base
   attr_accessor :delete_photo
   
   has_attached_file :photo, 
-    :styles => { :col_1 => "60x120>", :col_2 => "140x280>", :col_3  => "220x440"}, 
-    :url => "/uploads/:class/:attachment/:basename_:id_:style.:extension", 
-    :path => ":rails_root/public/uploads/:class/:attachment/:basename_:id_:style.:extension"
+    :styles => { :col_1 => "60x120>", :col_2 => "140x280>", :col_3  => "220x440"}
   
   #validates_presence_of :name, :on => "create", :message => "must be unique"
    
