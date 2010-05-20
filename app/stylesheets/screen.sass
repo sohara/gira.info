@@ -91,7 +91,12 @@ body#subindex
 				margin-top: 22px
 				padding: 3px 0
 				li
-					padding-right: 40px
+					width: 149px
+					text-align: center
+					border-right: 1px solid
+					border-color: #555
+				li.last
+					border-right: none
 				a
 					color = !light_blue_background
 					+hover-link
@@ -211,9 +216,30 @@ body#subindex
 	#section_nav
 		+column(3, true)
 		margin-top: 30px
-		a
-			+hover-link
-			color = !orange_red
+		ul
+			margin: 0
+			li
+				display: block
+				a
+					+hover-link
+					color = !orange_red
+					display: block
+					background-color: #ddd
+					padding: 3px
+					border-bottom: 1px solid #999
+				a:hover
+					background-color = !lighter_grey
+				ul
+					li
+						a
+							padding-left: 20px
+							background-color: #c9c9c9
+			li.on
+				a
+					color = !dark_text
+					background-color: #bbb
+
+				
 	#news
 		+column(6)
 	#regards
