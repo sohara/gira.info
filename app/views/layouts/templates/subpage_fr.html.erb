@@ -26,7 +26,11 @@
 				</div>
 				<div id="section_nav">
 					<h3><%= current_page.section.name %></h3>
-					<%= render_menu :from_top=>2, :depth => 3, :show_all_siblings=>true  %>
+						<% if current_page.section.name.include? "Regards" %>
+							<%= render_menu :from_top=>2, :depth => 3 %>
+						<% else %>	
+							<%= render_menu :from_top=>2, :depth => 3, :show_all_siblings=>true  %>
+						<% end %>	
 				</div>
 				<div id="footer">
 					<%= render_menu :from_top=>1, :depth=>1  %>

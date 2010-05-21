@@ -80,7 +80,7 @@ FCKConfig.EMailProtection = 'encode' ; // none | encode | function
 FCKConfig.EMailProtectionFunction = 'mt(NAME,DOMAIN,SUBJECT,BODY)' ;
 
 FCKConfig.StartupFocus	= false ;
-FCKConfig.ForcePasteAsPlainText	= false ;
+FCKConfig.ForcePasteAsPlainText	= true ;
 FCKConfig.AutoDetectPasteFromWord = true ;	// IE only.
 FCKConfig.ShowDropDialog = true ;
 FCKConfig.ForceSimpleAmpersand	= false ;

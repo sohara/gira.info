@@ -479,7 +479,7 @@ body#subindex {
           padding-right: 0px; }
       /* line 93, ../../../app/stylesheets/screen.sass */
       body#subindex #header #menu ul li {
-        width: 149px;
+        padding: 0 30px;
         text-align: center;
         border-right: 1px solid;
         border-color: #555; }

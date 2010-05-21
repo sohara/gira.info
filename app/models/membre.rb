@@ -9,6 +9,8 @@ class Membre < ActiveRecord::Base
   
   #validates_presence_of :name, :on => "create", :message => "must be unique"
    
+  named_scope :coordination, :conditions => "(coordination = 1)"
+   
   def set_slug
     self.slug = name.to_slug unless name.blank?
   end
