@@ -1,17 +1,21 @@
 # Be sure to restart your server when you modify this file
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
+Encoding.default_internal = 'utf-8'
+Encoding.default_external = 'utf-8'
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
+  Encoding.default_internal = 'utf-8'
+  Encoding.default_external = 'utf-8'
   config.gem 'compass', :version => '>= 0.8.17'
   config.gem 'haml', :version => '>=2.2.16'
-  config.gem 'browsercmsi', :version => '3.1.11'
+  config.gem 'browsercmsi', :version => '3.1.2'
   config.gem 'bcms_news', :version => '1.0.0'
-  config.gem 'bcms_fckeditor' 
+  config.gem 'bcms_fckeditor', :version => '1.0.2'
   # config.gem "thoughtbot-paperclip", :lib => "paperclip", :version => ">=2.2.8", :source => "http://gems.github.com"
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
