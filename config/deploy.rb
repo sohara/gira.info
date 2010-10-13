@@ -5,9 +5,11 @@ set :user, "alien8web"
 set :ssh_options, { :forward_agent => true }
 
 set :scm, :git
-set :deploy_via, :remote_cache
+#set :deploy_via, :remote_cache
 set :repository, "file:///opt/repos/gira.git"
+set :local_repository, "alien8web:/opt/repos/gira.git"
 set :branch, "master"
+set :rails_env, "production"
 
 set :git_enable_submodules, 1
 
