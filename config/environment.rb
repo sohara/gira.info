@@ -7,8 +7,6 @@ RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
-  Encoding.default_internal = 'utf-8'
-  Encoding.default_external = 'utf-8'
   config.gem 'compass', :version => '>= 0.8.17'
   config.gem 'haml', :version => '>=2.2.16'
   config.gem 'browsercmsi', :version => '3.1.2'
