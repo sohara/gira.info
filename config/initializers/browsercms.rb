@@ -20,7 +20,7 @@ Cms::Behaviors::Attaching::MacroMethods.class_eval do
     before_save :update_attachment_if_changed 
     after_save :clear_attachment_ivars 
     belongs_to :attachment, :dependent => :destroy, :class_name => 
-'::Attachment' 
+'::Attachment'
     validates_each :attachment_file do |record, attr, value| 
       if record.attachment && !record.attachment.valid? 
         record.attachment.errors.each do |err_field, err_value| 
@@ -33,7 +33,8 @@ Cms::Behaviors::Attaching::MacroMethods.class_eval do
       end 
     end 
   end 
-end 
+end
+
 Attachment.class_eval do 
   def self.find_live_by_file_path(file_path) 
     ::Attachment.published.not_archived.first(:conditions => {:file_path => 

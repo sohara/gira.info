@@ -26,7 +26,7 @@ config.action_view.cache_template_loading            = true
 
 # Enable threaded mode
 # config.threadsafe!
-SITE_DOMAIN="gira.sohara.com" # This should match the URL for your public CMS site.
+SITE_DOMAIN="gira.info" # This should match the URL for your public CMS site.
 config.action_view.cache_template_loading = false
 config.action_controller.page_cache_directory = RAILS_ROOT + "/public/cache/"
 config.action_mailer.smtp_settings = {:address => 'mail.alien8recordings.com',
