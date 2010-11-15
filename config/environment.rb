@@ -12,6 +12,7 @@ Rails::Initializer.run do |config|
   config.gem 'browsercmsi', :version => '3.1.2'
   config.gem 'bcms_news', :version => '1.0.0'
   config.gem 'bcms_fckeditor', :version => '1.0.2'
+  config.gem 'paperclip'
   # config.gem "thoughtbot-paperclip", :lib => "paperclip", :version => ">=2.2.8", :source => "http://gems.github.com"
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
