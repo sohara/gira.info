@@ -8,7 +8,7 @@ end
 # the following is to make browsercms play nice with Paperclip
 Cms::Behaviors::Versioning::ClassMethods.class_eval do 
   def version_class_name 
-    "Blah::#{name}::Version" 
+    "::#{name}::Version" 
   end 
 end 
 
