@@ -7,7 +7,7 @@ set :ssh_options, { :forward_agent => true }
 set :scm, :git
 #set :deploy_via, :remote_cache
 set :repository, "file:///opt/repos/gira.git"
-set :local_repository, "alien8web:/opt/repos/gira.git"
+set :local_repository, "alien8web2:/opt/repos/gira.git"
 set :branch, "master"
 set :rails_env, "production"
 
@@ -19,9 +19,9 @@ after "deploy:update", "deploy:cleanup"
 set :use_sudo, false
 
 
-role :web, "209.172.35.182"
-role :app, "209.172.35.182"
-role :db,  "209.172.35.182", :primary => true
+role :web, "184.107.185.178"
+role :app, "184.107.185.178"
+role :db,  "184.107.185.178", :primary => true
 
 
 desc "Create the symlink to the database.yml in /shared"
@@ -47,5 +47,22 @@ namespace :deploy do
     task t, :roles => :app do ; end
   end
 end 
+
+## Tasks to restart passenger standalone
+namespace :deploy do
+  desc "Start passenger standalone"
+  task :start, :roles => :app, :except => { :no_release => true } do
+    run "cd #{current_path} && bundle exec passenger start -a 127.0.0.1 -p 3000 --daemonize --environment production"
+  end
+  desc "Stop passenger standalone on the server"
+  task :stop, :roles => :app, :except => { :no_release => true } do
+    run "cd #{current_path} && bundle exec passenger stop --pid-file tmp/pids/passenger.pid"
+  end
+  desc "Retart passenger standalone"
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "#{try_sudo} touch #{File.join(current_path, 'tmp', 'restart.txt')}"
+  end
+end
+
 
 after 'deploy:update_code', :db_sym_link, :link_shared_directories
