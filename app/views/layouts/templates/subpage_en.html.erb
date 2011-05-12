@@ -11,13 +11,14 @@
 		<div id="outer">    
 			<div id="container">
 				<div id="header">
+				  <%= render :partial => "layouts/locale_nav_en" %>
 					<h1 class="en">GIRA: Interdisciplinary Research Group on the Americas</h1>
 					<%= render_menu :from_top=>1, :depth=>1  %>
 				</div>
 				<div>
 				&nbsp;	<%= render_breadcrumbs :from_top=>1 %>&nbsp;
 				</div>
-				<h2 id="section_header"><%= current_page.ancestors[2].name %></h2>
+				<h2 id="section_header"><%= current_page.ancestors[2].try(:name) || current_page.name %></h2>
 				<div id="main">
 					<div id="main_text">
 						<h2><%= @my_page_title || page_title %></h2>
