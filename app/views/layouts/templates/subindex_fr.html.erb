@@ -11,6 +11,9 @@
 		<div id="outer">    
 			<div id="container">
 				<div id="header">
+				  
+          <%= render :partial => "layouts/locale_nav_fr" %>
+				  
 					<h1 class="fr">GIRA: Groupe interdisciplinaire de recherche sur les Amériques</h1>
 					<%= render_menu :from_top=>1, :depth=>1  %>
 				</div>
@@ -19,6 +22,7 @@
 					<div id="feature-teaser">
 						<h3><a href="/fr/qui-sommes-nous">En savoir plus</a></h3>
 					</div>
+					
 					<div id="feature-text-column">
 						<div id="feature-text">
 							<%= container :feature %>
@@ -35,10 +39,12 @@
 						<%= container :regards %>
 					</div>
 				</div>
+				
 				<div id="footer">
 					<%= render_menu :from_top=>1, :depth=>1  %>
 				</div>
-    </div>
-	</div>
+				
+			</div>
+	  </div>
   </body>
 </html>

@@ -63,6 +63,14 @@ body#index
 		+hover-link
 		color: #333
 
+ul#locale_nav
+	+horizontal-list
+	float: right
+	margin-top: 5px
+	a
+		color = !dark_text
+		+hover-link
+			
 body#subindex
 	background-color = !light_blue_background
 	#outer
@@ -104,6 +112,8 @@ body#subindex
 					a
 						color = !light_blue_background - #666
 
+
+	
 	#container
 		ul.breadcrumbs
 			color = !dark_background
@@ -157,38 +167,37 @@ body#subindex
 			a
 				+hover-link
 				color = !orange_header
-		#recent_news
-			+transparent-box(15px)
-			border-left: 1px solid 
+	#recent_news
+		+transparent-box(15px)
+		border-color = !light_blue_gray
+		padding-top: 25px
+		.news-item-browser
+			border-bottom: 1px dashed
 			border-color = !light_blue_gray
-			background: url(/images/gradient_rule.png) top right no-repeat
-			padding-top: 25px
-			.news-item-browser
-				border-bottom: 1px dashed
-				border-color = !light_blue_gray
-				margin-bottom: 10px
-				padding-bottom: 10px
-				color = !dark_text
-				h3
-					font-family = !serif
-					+caps
-					padding-left: 0
-					font-size: 2em
-					font-weight: normal
-					margin-bottom: 0px
-					line-height: 100%
-					a
-						color = !dark_text
-						+hover-link
-				p.news_date
-					color = !dark_blue_grey
-					margin-top: 0px
-				p
-					margin: 1em 0 0 0
-					font-size: 1.2em
-			a
-				+hover-link
-				color = !orange_red
+			margin-bottom: 10px
+			padding-bottom: 10px
+			color = !dark_text
+			h3
+				font-family = !serif
+				+caps
+				padding-left: 0
+				font-size: 2em
+				font-weight: normal
+				margin-bottom: 5px
+				line-height: 100%
+				a
+					color = !dark_text
+					+hover-link
+			p.news_date
+				color = !dark_blue_grey
+				margin-top: 0px
+				font-size: 10px
+			p
+				margin: 1em 0 0 0
+				font-size: 1.2em
+		a
+			+hover-link
+			color = !orange_red
 					
 	#main
 		+column(8)

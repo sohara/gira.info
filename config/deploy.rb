@@ -66,7 +66,7 @@ namespace :deploy do
   end
   desc "Stop passenger standalone on the server"
   task :stop, :roles => :app, :except => { :no_release => true } do
-    run "cd #{current_path} && bundle exec passenger stop --pid-file tmp/pids/passenger.pid"
+    run "cd #{current_path} && bundle exec passenger stop"
   end
   desc "Retart passenger standalone"
   task :restart, :roles => :app, :except => { :no_release => true } do
