@@ -26,7 +26,7 @@
 					</div>
 				</div>
 				<div id="section_nav">
-					<h3><%= current_page.section.name %></h3>
+					<h3><%= current_page.section.name unless current_page.section.name == "Home" %></h3>
 					<% if current_page.section.name.include? "Revisioning" %>
 						<%= render_menu :from_top=>2, :depth => 3 %>
 					<% else %>	
