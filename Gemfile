@@ -8,4 +8,5 @@ gem 'browsercmsi', '3.1.2'
 gem 'bcms_news', '1.0.0'
 gem 'bcms_fckeditor', '1.0.2'
 gem 'paperclip', '2.3.11'
-gem "passenger"
+gem "passenger", '~> 3.0.9'
+gem "capistrano", "~> 2.9.0"
