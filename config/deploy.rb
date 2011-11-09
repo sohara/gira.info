@@ -11,13 +11,13 @@ set :rvm_ruby_string, 'ruby-1.8.7'   # Or whatever env you want it to run in.
 set :application, "gira"
 
 set :deploy_to, "/var/vhosts/gira.info/#{application}"
-set :user, "alien8web" 
+set :user, "alien8web"
 set :ssh_options, { :forward_agent => true }
 
 set :scm, :git
 #set :deploy_via, :remote_cache
 set :repository, "file:///opt/repos/gira.git"
-set :local_repository, "alien8web2:/opt/repos/gira.git"
+set :local_repository, "alien8web:/opt/repos/gira.git"
 set :branch, "master"
 set :rails_env, "production"
 
@@ -36,10 +36,10 @@ role :db,  "184.107.185.178", :primary => true
 
 desc "Create the symlink to the database.yml in /shared"
 task :db_sym_link, :roles => :app do
-    run "ln -s /var/vhosts/gira.info/gira/shared/database.yml #{current_release}/config/database.yml"  
+    run "ln -s /var/vhosts/gira.info/gira/shared/database.yml #{current_release}/config/database.yml"
 end
 
-# links both /uploads (bcms default) and /public/uploads (for paperlcip) 
+# links both /uploads (bcms default) and /public/uploads (for paperlcip)
 # to /shared dir
 task :link_shared_directories do
   run "ln -s #{shared_path}/uploads #{release_path}/public/uploads"
@@ -56,7 +56,7 @@ namespace :deploy do
     desc "#{t} task is a no-op with mod_rails"
     task t, :roles => :app do ; end
   end
-end 
+end
 
 ## Tasks to restart passenger standalone
 namespace :deploy do
