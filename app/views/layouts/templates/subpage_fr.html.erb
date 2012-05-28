@@ -3,43 +3,43 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title><%= page_title %></title>
-		<link rel="stylesheet" href="/stylesheets/compiled/screen.css" type="text/css" media="screen, projection" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/compiled/screen.css" type="text/css" media="screen, projection" title="no title" charset="utf-8">
     <%= yield :html_head %>
   </head>
   <body id="subindex">
     <%= cms_toolbar %>
-		<div id="outer">    
-			<div id="container">
-				<div id="header">
-				  
+    <div id="outer">
+      <div id="container">
+        <div id="header">
+
           <%= render :partial => "layouts/locale_nav_fr" %>
-    				
-					<h1 class="fr">GIRA: Groupe interdisciplinaire de recherche sur les Amériques</h1>
-					<%= render_menu :from_top=>1, :depth=>1  %>
-				</div>
-				<div>
-				&nbsp;	<%= render_breadcrumbs :from_top=>1 %>&nbsp;
-				</div>
-				<h2 id="section_header"><%= current_page.ancestors[2].try(:name) || current_page.name %></h2>	
-				<div id="main">
-					<div id="main_text">
-						<h2><%= @my_page_title || page_title %></h2>
-						<%= container :main %>
-					</div>
-				</div>
-				<div id="section_nav">
-					<h3><%= current_page.section.name unless current_page.section.name == "Accueil" %></h3>
-						<% if current_page.section.name.include? "Regards" %>
-							<%= render_menu :from_top=>2, :depth => 3 %>
-						<% else %>	
-							<%= render_menu :from_top=>2, :depth => 3, :show_all_siblings=>true  %>
-						<% end %>	
-				</div>
-				<div id="footer">
-					<%= render_menu :from_top=>1, :depth=>1  %>
-				</div>	
-			</div>
+
+          <h1 class="fr">GIRA: Groupe interdisciplinaire de recherche sur les Amériques</h1>
+          <%= render_menu :from_top=>1, :depth=>1  %>
+        </div>
+        <div>
+        &nbsp;  <%= render_breadcrumbs :from_top=>1 %>&nbsp;
+        </div>
+        <h2 id="section_header"><%= current_page.ancestors[2].try(:name) || current_page.name %></h2>
+        <div id="main">
+          <div id="main_text">
+            <h2><%= @my_page_title || page_title %></h2>
+            <%= container :main %>
+          </div>
+        </div>
+        <div id="section_nav">
+          <h3><%= current_page.section.name unless current_page.section.name == "Accueil" %></h3>
+            <% if current_page.section.name.include? "Regards" %>
+              <%= render_menu :from_top=>2, :depth => 3 %>
+            <% else %>
+              <%= render_menu :from_top=>2, :depth => 3, :show_all_siblings=>true  %>
+            <% end %>
+        </div>
+        <div id="footer">
+          <%= render_menu :from_top=>1, :depth=>1  %>
+        </div>
+      </div>
     </div>
-	</div>
+  </div>
   </body>
 </html>
