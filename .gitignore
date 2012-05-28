@@ -5,3 +5,4 @@ config/database.yml
 public/uploads
 public/system
 uploads
+vendor/bundle
