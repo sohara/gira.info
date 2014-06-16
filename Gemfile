@@ -10,3 +10,4 @@ gem 'bcms_fckeditor', '1.0.2'
 gem 'paperclip', '2.3.11'
 gem "passenger", '~> 3.0.9'
 gem "capistrano", "~> 2.9.0"
+gem 'psych', '~> 1.3.4'
