@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem "rails", "2.3.17"
-gem "mysql2", '< 0.3'
+gem 'mysql2', '~> 0.2.23'
 gem 'compass', '0.10.6'
 gem 'haml', '3.0.25'
 gem 'browsercmsi', '3.1.2'
